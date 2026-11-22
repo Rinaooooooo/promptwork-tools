@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weekly Report Generator — Free, No Sign-Up | PromptWork Tools</title><meta name="description" content="Turn rough notes into a results-focused weekly report in seconds. Free, runs in your browser, plus a copy-ready AI prompt.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="Weekly Report Generator — Free, No Sign-Up | PromptWork Tools"><meta property="og:description" content="Turn rough notes into a results-focused weekly report in seconds. Free, runs in your browser, plus a copy-ready AI prompt."><meta property="og:type" content="website"><meta property="og:image" content="https://promptwork-tools.pages.dev/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/style.css"></head><body>
+<header class="site"><a class="logo" href="/">PromptWork Tools</a><nav><a href="/">All Tools</a><a href="/weekly-report-generator.html">Weekly Report</a><a href="/meeting-minutes-generator.html">Meeting Minutes</a><a href="/excel-formula-generator.html">Excel Formula</a></nav></header>
+<div class="wrap"><h1>Weekly Report Generator</h1><p class="small">Built on one rule: Action + Task + Result. Paste your rough notes and get a report your manager will actually read.</p>
+<div class="tool"><label>Your role</label><input id="role" placeholder="e.g. Marketing specialist">
+<label>Completed this week (one per line, add results or numbers)</label><textarea id="done" placeholder="Published 2 posts (12k views)&#10;Sorted 18 customer feedback items"></textarea>
+<label>In progress (one per line)</label><textarea id="prog" placeholder="Product guide: chapter 3 of 5 done"></textarea>
+<label>Blockers (one per line)</label><textarea id="block" placeholder="Waiting on supplier quote, no reply yet"></textarea>
+<label>Plan for next week (one per line)</label><textarea id="next" placeholder="Finish guide chapters 4-5&#10;Follow up on supplier quote on Monday"></textarea>
+<p><button class="btn primary" onclick="genWeekly()">Generate my report</button></p>
+<h3>Your result</h3><div class="out" id="out">Fill in the fields above and click Generate.</div><p><button class="btn" onclick="copyText('out',this)">Copy result</button></p>
+<h3>Want a smarter version? Use this AI prompt</h3><div class="out" id="prompt">Your copy-ready prompt for ChatGPT / Claude will appear here.</div><p><button class="btn" onclick="copyText('prompt',this)">Copy AI prompt</button></p></div>
+<div class="faq"><h2>FAQ</h2><h3>How do I write a weekly report that is not just a list?</h3><p>Write every item as Action + Task + Result. "Published 2 posts (12k views)" tells your manager what happened; "worked on posts" does not.</p>
+<h3>Should I include blockers?</h3><p>Yes — a blocker with your next step ("waiting on a quote, following up Monday") shows progress management, not excuses.</p>
+<h3>Is my text uploaded anywhere?</h3><p>No. This tool runs 100% in your browser.</p></div></div>
+<footer>PromptWork Tools — free office tools that run 100% in your browser. Nothing you type is uploaded or stored.<br><a href="/privacy-policy.html" style="color:#cbd5e1">Privacy Policy</a> &middot; <a href="/about.html" style="color:#cbd5e1">About &amp; Contact</a><br>&copy; 2026 PromptWork Tools</footer>
+<script src="/assets/app.js"></script></body></html>

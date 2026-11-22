@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PPT Outline Generator — Slide-by-Slide Outlines That Make Sense | PromptWork Tools</title><meta name="description" content="Enter a topic and audience and get a logical slide-by-slide presentation outline, plus an AI prompt for takeaway headlines.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="PPT Outline Generator — Slide-by-Slide Outlines That Make Sense | PromptWork Tools"><meta property="og:description" content="Enter a topic and audience and get a logical slide-by-slide presentation outline, plus an AI prompt for takeaway headlines."><meta property="og:type" content="website"><meta property="og:image" content="https://promptwork-tools.pages.dev/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/style.css"></head><body>
+<header class="site"><a class="logo" href="/">PromptWork Tools</a><nav><a href="/">All Tools</a><a href="/weekly-report-generator.html">Weekly Report</a><a href="/meeting-minutes-generator.html">Meeting Minutes</a><a href="/excel-formula-generator.html">Excel Formula</a></nav></header>
+<div class="wrap"><h1>PPT Outline Generator</h1><p class="small">A good deck is an argument, not a pile of slides. This outline follows a proven flow: why it matters, the problem, the evidence, the plan.</p>
+<div class="tool"><label>Presentation topic</label><input id="topic" placeholder="e.g. Q3 marketing results and Q4 plan">
+<label>Audience</label><input id="audience" placeholder="e.g. department managers">
+<label>Number of slides</label><input id="nslides" type="number" value="8" min="3" max="12">
+<p><button class="btn primary" onclick="genPpt()">Generate outline</button></p>
+<h3>Your result</h3><div class="out" id="out">Fill in the fields above and click Generate.</div><p><button class="btn" onclick="copyText('out',this)">Copy result</button></p>
+<h3>Want a smarter version? Use this AI prompt</h3><div class="out" id="prompt">Your copy-ready prompt for ChatGPT / Claude will appear here.</div><p><button class="btn" onclick="copyText('prompt',this)">Copy AI prompt</button></p></div>
+<div class="faq"><h2>FAQ</h2><h3>What makes a good slide headline?</h3><p>A headline should state the takeaway ("Sales grew 18% in Q3"), not just the topic ("Sales"). The generated AI prompt enforces that rule.</p></div></div>
+<footer>PromptWork Tools — free office tools that run 100% in your browser. Nothing you type is uploaded or stored.<br><a href="/privacy-policy.html" style="color:#cbd5e1">Privacy Policy</a> &middot; <a href="/about.html" style="color:#cbd5e1">About &amp; Contact</a><br>&copy; 2026 PromptWork Tools</footer>
+<script src="/assets/app.js"></script></body></html>

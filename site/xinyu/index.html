@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>心屿 · 下载</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(160deg,#fdf2f8,#ede9fe 55%,#e0f2fe);color:#1f2430;min-height:100vh}
+.wrap{max-width:560px;margin:0 auto;padding:28px 18px 48px}
+.logo{font-size:44px;text-align:center;margin-top:10px}
+h1{text-align:center;margin:6px 0 2px;font-size:30px;letter-spacing:2px}
+.sub{text-align:center;color:#6b7280;margin:0 0 22px}
+.card{background:#fff;border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 4px 18px rgba(120,90,200,.10)}
+.card h2{margin:0 0 10px;font-size:17px}
+.ver{text-align:center;font-size:15px;color:#374151}
+.dl{display:block;text-align:center;padding:14px;border-radius:12px;font-size:17px;font-weight:700;color:#fff;background:linear-gradient(90deg,#a78bfa,#f472b6);margin:10px 0;text-decoration:none}
+.dl.alt{background:#3b82f6}
+.dl.off{background:#d1d5db;color:#6b7280;pointer-events:none}
+ol{margin:6px 0 6px 18px;padding:0;line-height:2}
+.small{color:#6b7280;font-size:13px;line-height:1.8}
+.log div{padding:8px 0;border-bottom:1px dashed #e5e7eb}
+.log div:last-child{border-bottom:0}
+b.qq{color:#7c3aed}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">🏝️</div>
+  <h1>心 屿</h1>
+  <p class="sub">住在手机里的 AI 伙伴 · 有记忆 · 有心情 · 会长大</p>
+
+  <div class="card">
+    <p class="ver">当前版本：<b id="vname">v2.6</b>（Android）</p>
+    <a class="dl" id="dl1" href="#">⬇ 夸克网盘下载（推荐）</a>
+    <a class="dl alt" id="dl2" href="#">⬇ 百度网盘下载（备用）</a>
+    <p class="small">安装时提示“未知来源”允许一下即可。升级时直接覆盖安装，聊天记录和记忆不会丢（千万别先卸载）。</p>
+  </div>
+
+  <div class="card">
+    <h2>📝 使用步骤</h2>
+    <ol>
+      <li>安装后打开，配置页上方有你的<b>本机机器码</b>；</li>
+      <li>加 QQ <b class="qq">2785675112</b>（备注「心屿」）或发邮件到 <b>shadanai@muse.ai</b>，把机器码发过去，领 <b>7 天免费试用码</b>，粘进配置页保存；</li>
+      <li>在 platform.deepseek.com 注册并创建你自己的 API Key，填进配置页第四步，保存；</li>
+      <li>开聊 🎉 点顶部头像可换聊天对象，还能建群聊。</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>💰 价格</h2>
+    <p style="line-height:2;margin:4px 0">7 天免费试用 · 年卡 <b>29.9 元</b> · 永久买断 <b>49.9 元</b><br>没有月租，之后每月只有几块钱你自己的 Key 费用。<br>🎁 邀请好友：好友付费后你 +30 天；邀满 3 位好友付费，直接升永久。</p>
+  </div>
+
+  <div class="card log">
+    <h2>📜 更新日志</h2>
+    <div id="log"></div>
+  </div>
+
+  <p class="small" style="text-align:center">数据只存在你自己的手机里 · 联系：QQ 2785675112 / shadanai@muse.ai</p>
+</div>
+<script>
+fetch("version.json", {cache: "no-store"}).then(r => r.json()).then(v => {
+  document.getElementById("vname").textContent = "v" + v.name;
+  var l1 = document.getElementById("dl1"), l2 = document.getElementById("dl2");
+  if (v.links && v.links.quark) { l1.href = v.links.quark; } else { l1.classList.add("off"); l1.textContent = "⬇ 夸克网盘下载（即将上线）"; }
+  if (v.links && v.links.baidu) { l2.href = v.links.baidu; } else { l2.classList.add("off"); l2.textContent = "⬇ 百度网盘下载（即将上线）"; }
+  document.getElementById("log").innerHTML = (v.log || []).map(function(e){
+    return "<div><b>v" + e.v + "</b> · " + e.date + "<br>" + e.text + "</div>";
+  }).join("");
+}).catch(function(){});
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LinkedIn Summary Generator — Headline + About That Get Found | PromptWork Tools</title><meta name="description" content="Generate a searchable LinkedIn headline and a first-person About section from your role, specialties and results, plus an AI prompt.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="LinkedIn Summary Generator — Headline + About That Get Found | PromptWork Tools"><meta property="og:description" content="Generate a searchable LinkedIn headline and a first-person About section from your role, specialties and results, plus an AI prompt."><meta property="og:type" content="website"><meta property="og:image" content="https://promptwork-tools.pages.dev/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/style.css"></head><body>
+<header class="site"><a class="logo" href="/">PromptWork Tools</a><nav><a href="/">All Tools</a><a href="/weekly-report-generator.html">Weekly Report</a><a href="/meeting-minutes-generator.html">Meeting Minutes</a><a href="/excel-formula-generator.html">Excel Formula</a></nav></header>
+<div class="wrap"><h1>LinkedIn Summary Generator</h1><p class="small">Recruiters search for role titles and skills. This tool builds a headline that matches those searches and an About section that sounds like a person.</p>
+<div class="tool"><div class="row"><div><label>Your name</label><input id="liname" placeholder="e.g. Alex Morgan"></div><div><label>Current or target role</label><input id="lirole" placeholder="e.g. Operations Manager"></div></div>
+<div class="row"><div><label>Industry</label><input id="liind" placeholder="e.g. e-commerce logistics"></div><div><label>Years of experience</label><input id="liyrs" placeholder="e.g. 8"></div></div>
+<label>Specialties (one per line — these become headline keywords)</label><textarea id="lispec" placeholder="Supply chain planning&#10;Warehouse automation&#10;Vendor negotiation"></textarea>
+<label>Achievements (one per line)</label><textarea id="liach" placeholder="Cut fulfilment costs 18% across 3 warehouses&#10;Built the planning process the team still uses"></textarea>
+<label>Current focus (what you want to be known for / open to)</label><input id="lifocus" placeholder="e.g. helping mid-size retailers fix delivery promises">
+<p><button class="btn primary" onclick="genLinkedIn()">Generate headline + about</button></p>
+<h3>Your result</h3><div class="out" id="out">Fill in the fields above and click Generate.</div><p><button class="btn" onclick="copyText('out',this)">Copy result</button></p>
+<h3>Want a smarter version? Use this AI prompt</h3><div class="out" id="prompt">Your copy-ready prompt for ChatGPT / Claude will appear here.</div><p><button class="btn" onclick="copyText('prompt',this)">Copy AI prompt</button></p></div>
+<div class="faq"><h2>FAQ</h2><h3>What makes a LinkedIn headline work?</h3><p>Searchability. Recruiters type role titles and skills, not slogans. "Operations Manager | Supply Chain Planning | E-commerce Logistics" gets found; "Passionate problem-solver" does not.</p>
+<h3>First person or third person for the About section?</h3><p>First person. It reads as a human talking, and it is the voice people expect when they reach out to connect.</p></div></div>
+<footer>PromptWork Tools — free office tools that run 100% in your browser. Nothing you type is uploaded or stored.<br><a href="/privacy-policy.html" style="color:#cbd5e1">Privacy Policy</a> &middot; <a href="/about.html" style="color:#cbd5e1">About &amp; Contact</a><br>&copy; 2026 PromptWork Tools</footer>
+<script src="/assets/app.js"></script></body></html>

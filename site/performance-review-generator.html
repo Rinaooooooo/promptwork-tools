@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Performance Review Generator — A Self-Review Built on Evidence | PromptWork Tools</title><meta name="description" content="Turn your achievements, skills and challenges into a structured performance self-review, plus a copy-ready AI prompt. Free, no sign-up.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="Performance Review Generator — A Self-Review Built on Evidence | PromptWork Tools"><meta property="og:description" content="Turn your achievements, skills and challenges into a structured performance self-review, plus a copy-ready AI prompt. Free, no sign-up."><meta property="og:type" content="website"><meta property="og:image" content="https://promptwork-tools.pages.dev/og-image.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/assets/style.css"></head><body>
+<header class="site"><a class="logo" href="/">PromptWork Tools</a><nav><a href="/">All Tools</a><a href="/weekly-report-generator.html">Weekly Report</a><a href="/meeting-minutes-generator.html">Meeting Minutes</a><a href="/excel-formula-generator.html">Excel Formula</a></nav></header>
+<div class="wrap"><h1>Performance Review Generator</h1><p class="small">Self-reviews are won on evidence, not adjectives. Put in what you delivered — with numbers — and get a review your manager can calibrate on.</p>
+<div class="tool"><div class="row"><div><label>Your role</label><input id="rvrole" placeholder="e.g. Customer Support Lead"></div><div><label>Review period</label><input id="rvperiod" placeholder="e.g. 2026, second half"></div></div>
+<label>Self-rating</label><select id="rvrate"><option>Exceeded expectations</option><option>Met expectations</option><option>Approaching expectations</option></select>
+<label>Key achievements (one per line, add numbers)</label><textarea id="rvach" placeholder="Reduced average ticket resolution time from 9h to 5h&#10;Trained 4 new team members to full productivity"></textarea>
+<label>Skills you developed (one per line)</label><textarea id="rvgrow" placeholder="Root-cause analysis&#10;Running weekly team reviews"></textarea>
+<label>Challenges and what you learned (one per line)</label><textarea id="rvchal" placeholder="Q3 backlog spike: learned to escalate capacity problems two weeks earlier"></textarea>
+<label>Goals for next period (one per line)</label><textarea id="rvgoals" placeholder="Bring resolution time under 4h&#10;Document the top 20 recurring issues"></textarea>
+<p><button class="btn primary" onclick="genReview()">Generate my self-review</button></p>
+<h3>Your result</h3><div class="out" id="out">Fill in the fields above and click Generate.</div><p><button class="btn" onclick="copyText('out',this)">Copy result</button></p>
+<h3>Want a smarter version? Use this AI prompt</h3><div class="out" id="prompt">Your copy-ready prompt for ChatGPT / Claude will appear here.</div><p><button class="btn" onclick="copyText('prompt',this)">Copy AI prompt</button></p></div>
+<div class="faq"><h2>FAQ</h2><h3>What do managers actually look for in a self-review?</h3><p>Evidence. Every claim should carry a number, a date or a before-and-after. "Improved the process" is forgettable; "cut resolution time from 9h to 5h" is a calibration anchor.</p>
+<h3>Should I hide my weak areas?</h3><p>No — name one real challenge and what you changed because of it. A review with no weakness reads as either unaware or dishonest, and managers discount the whole document.</p></div></div>
+<footer>PromptWork Tools — free office tools that run 100% in your browser. Nothing you type is uploaded or stored.<br><a href="/privacy-policy.html" style="color:#cbd5e1">Privacy Policy</a> &middot; <a href="/about.html" style="color:#cbd5e1">About &amp; Contact</a><br>&copy; 2026 PromptWork Tools</footer>
+<script src="/assets/app.js"></script></body></html>
